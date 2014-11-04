@@ -1,0 +1,188 @@
+/* Universal */
+/* ============================= */
+* {
+    margin  : 0;
+    padding : 0;
+}
+
+html {
+    background : #eee;
+    min-height : 100%;
+}
+
+body {
+    background : #eee;
+    height     : auto;
+    position   : relative;
+}
+
+img {
+    border : none;
+}
+
+::selection {
+    background : #393e42;
+    color      : #FFF;
+}
+
+::-moz-selection {
+    background : #393E42;
+    color      : #FFF;
+}
+
+/* Typo */
+/* ============================= */
+body, td {
+    font-family: 'Roboto', sans-serif;
+    font-size   : 12px;
+    color       : #333;
+    line-height : 18px;
+}
+
+h1, h2, h3 {
+    letter-spacing : 0;
+    font-style     : normal;
+}
+
+h1 {
+    font-size   : 30px;
+    line-height: 34px;
+    color       : #ED5C33;
+    font-weight : bold;
+    margin      : 0 0 20px 0;
+}
+
+h2 {
+    font-size   : 22px;
+    line-height: 27px;
+    color       : #ED5C33;
+    font-weight : bold;
+    margin      : 0 0 10px 0;
+}
+
+h3 {
+    font-size   : 18px;
+    line-height: 16px;
+    color       : #ED5C33;
+    font-weight : bold;
+    margin      : 0 0 10px 0;
+}
+
+h4 {
+    font-size   : 14px;
+    line-height: 17px;
+    color       : #666666;
+    font-weight : bold;
+}
+
+a, a:visited, a:active {
+    color           : #ED5C33;
+    text-decoration : none;
+    outline         : none;
+}
+
+a:hover {
+    color           : #f7c603;
+    text-decoration : none;
+}
+
+hr {
+    margin     : 20px 0;
+    height     : 1px;
+    border     : none;
+    border-top : 1px solid #CCCCCC;
+    color      : #CCCCCC;
+}
+
+/* General */
+/* ============================= */
+
+/* Header */
+/* ============================= */
+header {
+	display: block;
+	float: left;
+	width: 100%;
+	background: #fff;
+	padding: 15px 10px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #b2b2b2;
+}
+
+.cs_logo {
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: lighter;
+}
+
+.cs_logo a {
+	color: #444;
+}
+
+/* Sidebar */
+/* ============================= */
+#cs_sidebar {
+	background: #dcdbde;
+	box-sizing: border-box;
+	border-right: 1px solid #b2b2b2;
+	height: 100%;
+	padding: 20px;
+}
+
+.cs_main_nav, .cs_main_nav ul, .cs_main_nav li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.cs_main_nav ul {
+	margin: 3px 0 0;
+}
+
+.cs_main_nav > li {
+	margin: 0 0 5px;
+}
+
+.cs_main_nav li {
+	padding: 3px 5px;
+	display: block;
+	width: 100%;
+	float: left;
+	color: #888;
+	font-weight: lighter;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.cs_main_nav li a {
+	padding: 3px 10px;
+	width: 100%;
+	float: left;
+	display: block;
+	color: #222;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 17px;
+}
+
+
+/* Content */
+/* ============================= */
+#cs_content {
+	background: #fff;
+	box-sizing: border-box;
+	height: 100%;
+	padding: 20px;
+}
+
+/* Footer */
+/* ============================= */
+footer {
+	display: block;
+	float: left;
+	width: 100%;
+	padding: 15px 10px;
+	box-sizing: border-box;
+	/*background: #fff;
+	border-top: 1px solid #ddd;*/
+}
