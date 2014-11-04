@@ -1,0 +1,29 @@
+ErrorDocument 404 /page-not-found
+ErrorDocument 410 /page-not-found
+
+# Disable Directory Listings
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.+)/$ /$1 [R,L]
+
+	RewriteRule ^([a-zA-Z0-9-]+)/?$ /index.php?view=$1 [QSA]
+	RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$ /index.php?view=$1&category=$2 [QSA]
+	RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$ /index.php?view=$1&category=$2&file=$3 [QSA]
+
+	# Forbidden Folders
+	RewriteRule ^(cache|views|snippets|parts)(/.*)?$ - [F]
+</IfModule>
+
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE application/x-javascript application/javascript text/javascript text/css text/html text/xml
+</IfModule>
+
+<FilesMatch "\.(css|js|jpe?g|png|gif)$">
+	# Cache Static Content (age in seconds)
+	Header set Cache-Control "max-age=600, public"
+</FilesMatch>
