@@ -7,7 +7,7 @@
  */
 
 $html = 
-'<div class="grid_24 parallax_banner parallax" style="background-image: url(\'http://dummyimage.com/1900x500/000/fff\');">
+'<div class="grid_24 parallax_banner parallax" style="background-image: url(\'http://dummyimage.com/1900x800/000/fff\');">
     <div class="container_24">
         <div class="grid_24 inner">
             <div class="parallax_heading">
@@ -17,11 +17,21 @@ $html =
     </div>
 </div>
 
-<div class="grid_24 parallax_banner parallax" style="background-image: url(\'http://dummyimage.com/1900x500/CCC/000\');">
+<div class="grid_24 parallax_banner parallax" style="background-image: url(\'http://dummyimage.com/1900x800/CCC/000\');">
+    <div class="container_24">
+        <div class="grid_24 inner">
+            <div class="parallax_heading" data-stellar-ratio="0.2">
+                <h2>Second Banner</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid_24 parallax_banner parallax" style="background-image: url(\'http://dummyimage.com/1900x800/eee/FF2750\');" data-stellar-background-ratio="0.7">
     <div class="container_24">
         <div class="grid_24 inner">
             <div class="parallax_heading">
-                <h2>Second Banner</h2>
+                <h2>Third Banner</h2>
             </div>
         </div>
     </div>
@@ -32,6 +42,7 @@ $css =
 '.parallax {
     overflow: hidden;
 
+    background-position: center center;
     height: 600px;
 }
 

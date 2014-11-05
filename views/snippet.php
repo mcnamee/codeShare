@@ -20,7 +20,7 @@
 
 			/* CODE SNIPPETS */
 	?>
-			<a class="cs_openCodeshare __cs_openCodeshare" href="#"><i class="fa fa-code"></i></a>
+			<a class="cs_button cs_openCodeshare __cs_openCodeshare" href="#"><i class="fa fa-code"></i></a>
 			<div class="cs_codeshare">
 				<?php if( !empty($plugins) ) : ?>
 				<div class="grid_24">

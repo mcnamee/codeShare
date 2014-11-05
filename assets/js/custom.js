@@ -2,11 +2,24 @@
 /* Make Sidebar full height */
 /* ==================================== */
 function cs_fullSidebarHeight() {
-	$('#cs_sidebar, #cs_content').css( 'min-height', $(window).height() - $('header').innerHeight() );
+	var min_height = $(window).height() - $('header').innerHeight();
+	if( $(window).width() < 767 ) { min_height = '100%'; }
+
+	$('#cs_sidebar, #cs_content').css( 'min-height', min_height );
 }
 
 $(window).ready(function(){ cs_fullSidebarHeight(); });
 $(window).resize(function(){ cs_fullSidebarHeight(); });
+
+
+/* Menu Open/Close */
+/* ==================================== */
+$(function () {
+	$('body').on('click', '.__cs_openMenu', function(event){
+		event.preventDefault();
+		$('.__menu_to_open').slideToggle();
+	});
+});
 
 
 /* Sidebar Accordion */

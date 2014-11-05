@@ -125,6 +125,10 @@ header {
 	font-weight: lighter;
 }
 
+@media screen and (max-width:767px) {
+	.cs_logo { line-height: 36px; }
+}
+
 .cs_logo a {
 	color: #444;
 }
@@ -135,7 +139,11 @@ header {
 	background: #22242B;
 	box-sizing: border-box;
 	height: 100%;
-	padding: 20px 0 0 20px;
+	padding: 20px 0 20px 20px;
+}
+
+@media screen and (max-width: 767px) {
+	#cs_sidebar { display: none; }
 }
 
 .cs_main_nav, .cs_main_nav ul, .cs_main_nav li {
@@ -326,29 +334,34 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus,
     box-shadow         : #0aa0c6 0 0 4px;
 }
 
-/* Code Share */
+/* Icon Button */
 /* ============================= */
-a.cs_openCodeshare {
-	z-index: 100;
+a.cs_button {
 	display: block;
 	float: left;
 	font-size: 20px;
-	position: absolute;
-	right: 15px;
-	top: 15px;
 	background: #FF2750;
 	color: #fff;
-	padding: 8px;
+	padding: 8px 10px;
 	border-radius: 3px;
 	transition: box-shadow linear 0.2s;
 }
 
-a.cs_openCodeshare:hover {
+a.cs_button:hover {
 	box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 }
 
-a.cs_openCodeshare:active {
+a.cs_button:active {
 	box-shadow: inset 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Code Share */
+/* ============================= */
+a.cs_openCodeshare {
+	z-index: 100;
+	position: absolute;
+	right: 15px;
+	top: 15px;
 }
 
 .cs_openCodeshare code {
@@ -372,7 +385,12 @@ a.cs_openCodeshare:active {
 	background: rgba(0,0,0,0.7);
 	z-index: 99;
 	padding: 30px 10px;
-	overflow: scroll;
+	overflow: auto;
+}
+
+@media screen and (max-width:767px) {
+	.cs_codeshare { min-height: 600px; }
+
 }
 
 .cs_codeshare h2 {
@@ -387,6 +405,7 @@ a.cs_openCodeshare:active {
 	display: block;
 	float: left;
 	border: 0;
+	min-height: 600px;
 }
 
 /* Footer */

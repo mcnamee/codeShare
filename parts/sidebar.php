@@ -3,7 +3,7 @@
 	$dir = 'snippets';
 	$directories = array_diff(scandir($dir), $ignore);
 ?>
-<div id="cs_sidebar" class="grid_4">
+<div id="cs_sidebar" class="grid_4 __menu_to_open">
 	<ul class="cs_main_nav">
 		<?php
 			foreach( $directories as $directory ) :
