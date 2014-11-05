@@ -100,6 +100,10 @@ hr {
     color      : #CCCCCC;
 }
 
+code {
+	outline: none;
+}
+
 /* General */
 /* ============================= */
 
@@ -110,9 +114,9 @@ header {
 	float: left;
 	width: 100%;
 	background: #fff;
-	padding: 15px 10px;
+	padding: 15px 15px;
 	box-sizing: border-box;
-	border-bottom: 1px solid #b2b2b2;
+	border-bottom: 1px solid #CED0D9;
 }
 
 .cs_logo {
@@ -128,11 +132,10 @@ header {
 /* Sidebar */
 /* ============================= */
 #cs_sidebar {
-	background: #dcdbde;
+	background: #22242B;
 	box-sizing: border-box;
-	border-right: 1px solid #b2b2b2;
 	height: 100%;
-	padding: 20px;
+	padding: 20px 0 0 20px;
 }
 
 .cs_main_nav, .cs_main_nav ul, .cs_main_nav li {
@@ -150,7 +153,7 @@ header {
 }
 
 .cs_main_nav li {
-	padding: 3px 5px;
+	padding: 3px 0 3px 5px;
 	display: block;
 	width: 100%;
 	float: left;
@@ -158,18 +161,82 @@ header {
 	font-weight: lighter;
 	font-size: 16px;
 	line-height: 19px;
+	text-transform: uppercase;
+	box-sizing: border-box;
+}
+
+.cs_main_nav li li {
+	padding: 0;
+	padding-left: 5px;
 }
 
 .cs_main_nav li a {
-	padding: 3px 10px;
+	text-transform: none;
+	padding: 6px 10px;
 	width: 100%;
 	float: left;
 	display: block;
-	color: #222;
+	color: #CCC;
 	font-weight: normal;
 	font-size: 13px;
 	line-height: 17px;
+	box-sizing: border-box;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
+
+.cs_main_nav li a:hover,
+.cs_main_nav li a.active {
+	color: #FFF;
+}
+
+.cs_main_nav li a.active {
+	font-weight: bold;
+	border-right: 3px solid #FF2750;
+}
+
+.cs_categoryTitle {
+	position: relative;
+}
+
+.cs_categoryTitle > span {
+	cursor: pointer;
+	display: block;
+}
+
+.cs_categoryTitle:after {
+    display:            inline-block;
+    font-family:        "FontAwesome";
+    font-weight:        normal;
+    content:            "\f0d8";
+    margin-left:        5px;
+    float: right;
+    position: absolute;
+	right: 10px;
+	top: 0;
+
+    -webkit-transform:  rotate(0deg);
+    -moz-transform:     rotate(0deg);
+    -ms-transform:      rotate(0deg);
+    -o-transform:       rotate(0deg);
+    transform:          rotate(0deg);
+
+    -webkit-transition: -webkit-transform ease 0.2s;
+    -moz-transition:    -moz-transform ease 0.2s;
+    -ms-transition:     -ms-transform ease 0.2s;
+    -o-transition:      -o-transform ease 0.2s;
+    transition:         transform ease 0.2s;
+}
+
+.cs_categoryTitle.closed:after {
+    -webkit-transform: rotate(180deg);
+    -moz-transform:    rotate(180deg);
+    -ms-transform:     rotate(180deg);
+    -o-transform:      rotate(180deg);
+    transform:         rotate(180deg);
+}
+
 
 
 /* Content */
@@ -179,6 +246,84 @@ header {
 	box-sizing: border-box;
 	height: 100%;
 	padding: 20px;
+}
+
+/* Buttons */
+/* ============================= */
+.btn, input[type="submit"], button {
+	background: #0aa0c6;
+	background-image: -webkit-linear-gradient(top, #0aa0c6, #0788a8);
+	background-image: -moz-linear-gradient(top, #0aa0c6, #0788a8);
+	background-image: -ms-linear-gradient(top, #0aa0c6, #0788a8);
+	background-image: -o-linear-gradient(top, #0aa0c6, #0788a8);
+	background-image: linear-gradient(to bottom, #0aa0c6, #0788a8);
+	-webkit-border-radius: 3;
+	-moz-border-radius: 3;
+	border-radius: 3px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 13px;
+	padding: 10px 23px 10px 23px;
+	border: solid #0788a8 1px;
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+}
+
+.btn:hover, input[type="submit"]:hover, button:hover,
+.btn:active, input[type="submit"]:active, button:active {
+	background: #0badd6;
+	background-image: -webkit-linear-gradient(top, #0badd6, #0693b3);
+	background-image: -moz-linear-gradient(top, #0badd6, #0693b3);
+	background-image: -ms-linear-gradient(top, #0badd6, #0693b3);
+	background-image: -o-linear-gradient(top, #0badd6, #0693b3);
+	background-image: linear-gradient(to bottom, #0badd6, #0693b3);
+	text-decoration: none;
+}
+
+.btn:active, input[type="submit"]:active, button:active {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-o-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* Forms */
+/* ============================= */
+input[type="text"], input[type="email"], input[type="number"], input[type="url"], input[type="password"], textarea, select {
+    width                 : 100%;
+    color 				  : #555;
+    -webkit-border-radius : 3px;
+    -moz-border-radius    : 3px;
+    border-radius         : 3px;
+    padding               : 9px;
+    font-size 			  : 14px;
+    line-height 		  : 17px;
+    outline				  : none;
+    border                : 1px solid #BABABA;
+    -webkit-box-shadow    : rgba(255, 255, 255, 0) 0 0 4px;
+    -moz-box-shadow       : rgba(255, 255, 255, 0) 0 0 4px;
+    box-shadow            : rgba(255, 255, 255, 0) 0 0 4px;
+    -moz-transition       : box-shadow linear 0.2s, border linear 0.2s;
+    -webkit-transition    : box-shadow linear 0.2s, border linear 0.2s;
+    -o-transition         : box-shadow linear 0.2s, border linear 0.2s;
+    transition            : box-shadow linear 0.2s, border linear 0.2s;
+    -webkit-box-sizing    : border-box;
+    -moz-box-sizing       : border-box;
+    -ms-box-sizing        : border-box;
+    -o-box-sizing         : border-box;
+    box-sizing            : border-box;
+}
+
+input[type="text"]:hover, input[type="email"]:hover, input[type="number"]:hover, input[type="url"]:hover, input[type="password"]:hover, textarea:hover {
+    border : 1px solid #888;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="url"]:focus, input[type="password"]:focus, textarea:focus {
+    border             : 1px solid #0aa0c6;
+    -webkit-box-shadow : #0aa0c6 0 0 4px;
+    -moz-box-shadow    : #0aa0c6 0 0 4px;
+    box-shadow         : #0aa0c6 0 0 4px;
 }
 
 /* Code Share */
@@ -195,6 +340,15 @@ a.cs_openCodeshare {
 	color: #fff;
 	padding: 8px;
 	border-radius: 3px;
+	transition: box-shadow linear 0.2s;
+}
+
+a.cs_openCodeshare:hover {
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+a.cs_openCodeshare:active {
+	box-shadow: inset 2px 2px 4px rgba(0,0,0,0.4);
 }
 
 .cs_openCodeshare code {
@@ -218,6 +372,7 @@ a.cs_openCodeshare {
 	background: rgba(0,0,0,0.7);
 	z-index: 99;
 	padding: 30px 10px;
+	overflow: scroll;
 }
 
 .cs_codeshare h2 {

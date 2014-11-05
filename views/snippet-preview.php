@@ -10,11 +10,7 @@
 		<h1><?php echo prettyFileName($_GET['file'], true); ?> Preview</h1>
 		<?php echo $html; ?>
 		<?php
-			if( !empty($plugins) ) :
-				foreach($plugins as $plugin) :
-					echo '<script src="' . $plugin . "></script>";
-				endforeach;
-			endif;
+			outputPlugins($plugins);
 		 ?>
 		<script type="text/javascript"><?php echo $js; ?></script>
 	<?php else : ?>

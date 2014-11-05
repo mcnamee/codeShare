@@ -30,8 +30,9 @@
 				endif;
 		?>
 			<?php if( !empty($files) ) : ?>
-			<li><?php echo prettyFileName($directory, true); ?>
-				<ul>
+			<li class="cs_categoryTitle __cs_collapse_header">
+				<span><?php echo prettyFileName($directory, true); ?></span>
+				<ul class="__cs_collapse_content">
 					<?php
 						foreach( $files as $file ) :
 							$old_file_path = BASE_DIR . $dir . '/' . $directory . '/' . $file;
@@ -46,9 +47,10 @@
 							endif;
 
 							if( !empty($file_path) && is_file($file_path) ) :
+								$active =( $_GET['file'] == strToURL(prettyFileName($file)) ) ? ' class="active"' : '';
 					?>
 
-					<li><a href="/snippet/<?php echo strToURL($directory); ?>/<?php echo strToURL(prettyFileName($file)); ?>"><?php echo prettyFileName($file, true); ?></a></li>
+					<li><a href="/snippet/<?php echo strToURL($directory); ?>/<?php echo strToURL(prettyFileName($file)); ?>"<?php echo $active; ?>><?php echo prettyFileName($file, true); ?></a></li>
 						<?php endif; ?>
 					<?php endforeach; ?>
 				</ul>

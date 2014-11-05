@@ -46,3 +46,34 @@ function checkUrlSafe( $string ) {
 		return FALSE;
 	}
 }
+
+/*
+ *	Output plugins nicely - js to script and css to link
+ */
+function outputPlugins( $plugins, $display = false ) {
+	if( !empty($plugins) ) :
+		foreach($plugins as $key => $plugin) :
+			if( is_array($plugin) ) :
+				if( $key == 'js' ) :
+					foreach( $plugin as $js ) :
+						$output = '<script src="' . $js . '"></script>';
+						if( $display ) { $output = htmlspecialchars($output); }
+						echo $output . "\n";
+					endforeach;
+				endif;
+
+				if( $key == 'css' ) :
+					foreach( $plugin as $css ) :
+						$output = '<link href="' . $css . '" rel="stylesheet" />';
+						if( $display ) { $output = htmlspecialchars($output); }
+						echo $output . "\n";
+					endforeach;
+				endif;
+			elseif( !empty($plugin) ) :
+				$output = '<script src="' . $plugin . '"></script>';
+				if( $display ) { $output = htmlspecialchars($output); }
+				echo $output . "\n";
+			endif;
+		endforeach;
+	endif;
+}

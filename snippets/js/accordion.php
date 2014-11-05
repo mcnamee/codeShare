@@ -10,6 +10,11 @@
 $css = 
 '.collapse_header {
     cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.collapse_content {
+    padding: 0 0 15px;
 }
 
 .collapse_header:after {
@@ -49,17 +54,17 @@ $css =
 $html = 
 '<h2 class="collapse_header">Heading to open/close</h2>
 <div class="collapse_content">
-   This is the content to hide.
+   <p>Faucibus natoque curabitur lacinia taciti tellus congue odio parturient quisque urna ullamcorper nam euismod primis varius vehicula luctus curae egestas. Rutrum sociosqu id vulputate adipiscing tortor a posuere adipiscing massa ultrices dolor vestibulum imperdiet nascetur nunc ullamcorper commodo.</p>
 </div>
 
 <h2 class="collapse_header closed">Heading (Auto Closed)</h2>
 <div class="collapse_content">
-   This content is already hidden.
+   <p>Faucibus natoque curabitur lacinia taciti tellus congue odio parturient quisque urna ullamcorper nam euismod primis varius vehicula luctus curae egestas. Rutrum sociosqu id vulputate adipiscing tortor a posuere adipiscing massa ultrices dolor vestibulum imperdiet nascetur nunc ullamcorper commodo.</p>
 </div>
 
 <h2 class="collapse_header closed">Heading to open/close</h2>
 <div class="collapse_content">
-   Also works with other elements that are not divs.
+    <p>Faucibus natoque curabitur lacinia taciti tellus congue odio parturient quisque urna ullamcorper nam euismod primis varius vehicula luctus curae egestas. Rutrum sociosqu id vulputate adipiscing tortor a posuere adipiscing massa ultrices dolor vestibulum imperdiet nascetur nunc ullamcorper commodo.</p>
 </div>
 ';
 
